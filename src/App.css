@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #d9d9d9;
+}
+
+.container > div {
+  display: flex;
+  flex: 1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.container > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 3vmax;
+}
+
+.container > div > div > h1 {
+  border-bottom: 2px solid #00000052;
+  color: #000000e0;
+  width: 80%;
+  text-align: center;
+  padding: 2vmax 0vmax;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #a5a5a5;
+  border-radius: 1.2vmax;
+  padding: 2vmax 0;
+}
+
+.formContainer > form > div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer > form > div > div {
+  display: flex;
+  align-items: center;
+  gap: 2vmax;
+  padding: 1vmax 0;
+  width: 100%;
+}
+
+.formContainer > form > div > div > div {
+  display: flex;
+  align-items: center;
+  gap: 1.2vmax;
+  padding: 1vmax 0;
+  width: 100%;
+}
+
+.formContainer > form > div > div > p,
+.formContainer > form > div > div > div > p {
+  font-size: 1.2vmax;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.formContainer > form > div > div > input,
+.formContainer > form > div > div > div > input {
+  width: 60%;
+  padding: 0.5vmax;
+  border-radius: 0.5vmax;
+  outline: none;
+  border: none;
+}
+
+.f1 {
+  border-bottom: 2px solid black;
+  padding-bottom: 2vmax;
+}
+
+.f2 {
+  padding-top: 2vmax;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
+.btns > button {
+  width: 45%;
+  padding: 1.2vmax 0;
+  border-radius: 0.5vmax;
+  outline: none;
+  border: none;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btns > button:first-child {
+  background-color: red;
+  transition: all 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btns > button:first-child:hover {
+  background-color: rgb(175, 3, 3);
+}
+
+.btns > button:last-child {
+  background-color: black;
+  transition: all 0.5s;
+}
+
+.btns > button:last-child:hover {
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmax;
+  margin-bottom: 5vmax;
+  width: 100%;
+}
+
+.output > textarea {
+  padding: 1vmax;
+  outline: none;
+  border: none;
+  border-radius: 0.5vmax;
+  width: 80%;
+  height: 50vh;
+}
+
+.copyBtn {
+  width: 80%;
+  padding: 1.2vmax 0;
+  border-radius: 0.5vmax;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: all 0.5s;
+}
+
+.copyBtn:hover {
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+@media screen and (max-width: 750px) {
+  .container > div > div {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .formContainer > form > div > div > p,
+  .formContainer > form > div > div > div > p {
+    font-size: 1.6vmax;
   }
 }
