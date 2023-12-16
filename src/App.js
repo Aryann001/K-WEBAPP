@@ -35,18 +35,18 @@ function App() {
     const outputMessage = `
       Date = ${new Date(date).toDateString()}
 
-      Old Payment = ${oldPayment}
-      Paid Recently = ${paidRecently}
+      Old Payment = ₹${Number(oldPayment).toLocaleString("en-IN")}
+      Paid Recently = ₹${Number(paidRecently).toLocaleString("en-IN")}
 
       -------------------------
 
-      Balance = ${Number(oldPayment - paidRecently)}
-      ${nag} Nag = ${Number(nag * amountPerNag)}
+      Balance = ₹${Number(oldPayment - paidRecently).toLocaleString("en-IN")}
+      ${nag} Nag = ₹${Number(nag * amountPerNag).toLocaleString("en-IN")}
 
       -------------------------
 
-      Total Amount Remaining = ${
-        Number(oldPayment - paidRecently) + Number(nag * amountPerNag)
+      Total Amount Remaining = ₹${
+       Number(Number(oldPayment - paidRecently) + Number(nag * amountPerNag)).toLocaleString("en-IN")
       }
 
       
