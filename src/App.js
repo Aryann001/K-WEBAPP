@@ -33,7 +33,7 @@ function App() {
     e.preventDefault();
 
     const outputMessage = `
-      Date = ${new Date(date).getDate()}/${new Date(date).getMonth()}/${new Date(date).getFullYear()}
+      Date = ${new Date(date).getDate()}/${new Date(date).getMonth()+1}/${new Date(date).getFullYear()}
 
       Old Payment = ₹${Number(oldPayment).toLocaleString("en-IN")}
       Paid Recently = ₹${Number(paidRecently).toLocaleString("en-IN")}
@@ -54,7 +54,7 @@ function App() {
       -------------------------
 
       Old Empty = ${oldEmpty}
-      ${new Date(emptyDate).getDate()}/${new Date(emptyDate).getMonth()}/${new Date(emptyDate).getFullYear()} Empty = ${recentEmpty}
+      ${new Date(emptyDate).getDate()}/${new Date(emptyDate).getMonth()+1}/${new Date(emptyDate).getFullYear()} Empty = ${recentEmpty}
 
       -------------------------
 
